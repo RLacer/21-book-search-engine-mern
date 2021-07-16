@@ -5,36 +5,48 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    password: String!
+    bookCount: Int
+    savedBooks: [Book]
   }
+
 
   type Book{
     bookId: ID!
-  authors: String!
+  authors: [String!]
    description: String!
     image: String!
     link: String!
     title: String!
   }
 
+
   type Auth {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    token: ID!
+    user: User
   }
-
-  type BookInput {
-
+  input BookInput {
+    authors:[String!]
+    description: String!
+    title: String!
+    bookId: ID!
+    image: String!
+    link: String!
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    user: [User]
+    user(userId: ID!): User
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    addUser(name: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+   
+    saveBook(bookData: BookInput): User
+    removeBook(bookId: ID!): User
+
   }
+
 `;
 
 module.exports = typeDefs;
