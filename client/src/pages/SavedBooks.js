@@ -6,7 +6,7 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import { REMOVE_BOOK } from '../utils/mutations';
-import { Query_Me } from '../utils/queries';
+import { Get_Me } from '../utils/queries';
 
 const SavedBooks = () => {
   const [userData, setUserData] = useState({});
