@@ -49,7 +49,7 @@
 * GitHub Repo: https://github.com/RLacer/21-book-search-engine-mern
 
 ## Screenshot
-![screenshot](assets/21hw.PNG)
+![screenshot](public/assets/21hw.PNG)
 
 
 
