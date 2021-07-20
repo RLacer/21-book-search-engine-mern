@@ -18,8 +18,12 @@
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "apollo-boost": "^0.4.9",
+    "apollo-react": "^0.7.1",
     "graphql": "^15.5.1",
     "graphql-tag": "^2.12.5",
-    "if-env": "^1.0.4"
+    "hooks": "^0.3.2",
+    "if-env": "^1.0.4",
+    "react-do": "^1.1.6",
+    "react-dom": "^17.0.2"
   }
 }
