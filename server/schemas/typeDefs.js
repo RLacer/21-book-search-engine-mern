@@ -12,20 +12,20 @@ const typeDefs = gql`
 
   type Book{
     bookId: ID!
-    authors: [String!]
-     description: String!
-    image: String!
-    link: String!
+    authors: [String]
+     description: String
+    image: String
+    link: String
     title: String!
   }
   
   input BookInput {
-    authors:[String!]
+    authors:[String]
     description: String!
     title: String!
     bookId: String!
-    image: String!
-    link: String!
+    image: String
+    link: String
   }
 
   type Auth {
@@ -35,7 +35,7 @@ const typeDefs = gql`
 
 
   type Query {
-    me: [User]
+    me: User
  
   }
 
